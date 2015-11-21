@@ -1,30 +1,26 @@
-+ N!
-+ Sum 1..n
-+ Sum 1^2 + 2^2 + ... + n^2
-+ Or on power 3
+N!
+Sum 1..n
+Sum 1^2 + 2^2 + ... + n^2
+Or on power 3
 
-+ Check if a date is valid
+Check if a date is valid
 
-+ Compare two dates after checking that they are valid
+Compare two dates after checking that they are valid
 
-+ Check if point is in/outside circle
+Check if point is in/outside circle
 
-+ Check if a number is palindrome
-123454321 - OK
-12345 - KO
+Check if a number is palindrome
 
-~ Check if a number is primary
+Check if a number is primary
 
-+ Read a numnber and check if a bit is set or not.
+Read a bitmask and answer if a flag is up/down
 
-+ Find the n-th prime number
+Find the n-th prime number
 
-+ Check if number is power of 2
-(n & (n-1)) == 0
+Check if number is power of 2
 
 Read a number. It's power of 2,3,5 or 10. Write which is the base and what is the exponent. Otherwise write an error.
 
-+ Print the figure
 Input: n (int)
 Print:
    A
@@ -52,13 +48,13 @@ AAAA
    A
 
 
-+ Read a number (n).
+Read a number.
 Read char till reading e
 On r - reverse the number
 On d - divide the number by 5
 On m - reminder by 231
-On digit - n+=digit
 On * - n++
+On digit - n+=digit
 
 Check if a number has duplicate digits
 
