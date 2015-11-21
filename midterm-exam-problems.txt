@@ -1,7 +1,8 @@
-+ N!
-+ Sum 1..n
-+ Sum 1^2 + 2^2 + ... + n^2
-+ Or on power 3
+N!
+Sum 1..n
+Sum 1^2 + 2^2 + ... + n^2
+Or on power 3
+Read n, then read n numbers and print their sum
 
 + Check if a date is valid
 
@@ -60,20 +61,16 @@ On m - reminder by 231
 On digit - n+=digit
 On * - n++
 
-Check if a number has duplicate digits
++ Check if a number has duplicate digits
+  -> 101 - OK
+  -> 123 - KO
 
 Print the biggest digit of a number
 
-How many bits are set
++ Convert 'a' to 'A'
 
-10 to hex, hex to 10
-
-a to A
-
-Correct brackets
++ Correct brackets
 {[(
-
-Read n, then read n numbers and print their sum
 
 Sum all digits of a number
 
@@ -82,6 +79,5 @@ Read chars until nondigit and sum all digits.
 Read n, put every digit as power of 2, and
   - leave the mod 10
   - sum of the digits
-
 
 Longest repetition of letter

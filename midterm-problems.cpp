@@ -198,14 +198,127 @@ void numberTransformation() {
     }
   }
 }
+/* Check if a number has duplicate digits
+   767
+       ?
+   0 0 1 1 0 0 0 0 0 0 digits
+   9 8 7 6 5 4 3 2 1 0 | positions
+   0 0 1 0 0 0 0 0 0 0
+*/
+void hasDuplicateDigits() {
+  int n;
+  cin >> n;
+
+  int digits = 0;
+  bool hasDuplicates = false;
+  while (n > 0) {
+    int lastDigit = n % 10;
+    if ((digits & (1 << lastDigit)) > 0) {
+      hasDuplicates = true;
+      break;
+    } else {
+      digits = digits | (1 << lastDigit);
+    }
+    n /= 10;
+  }
+
+  if (hasDuplicates) {
+    cout << "hasDuplicates" << endl;
+  }
+}
+
+void changeCase() {
+  char c;
+  cin >> c;
+  if ('a' <= c && c <= 'z') {
+    cout << (char)(c + ('A' - 'a')) << endl;
+  }
+  if ('A' <= c && c <= 'Z') {
+    cout << (char)(c + ('a' - 'A')) << endl;
+  }
+}
+
+void matchBrackets() {
+  char c;
+  int smallBrackets = 0; // ()
+  int mediumBrackets = 0; // []
+  int bigBrackets = 0; // {}
+
+  bool isValid = true;
+
+  while (true) {
+    cin >> c;
+    if (c == ';') break;
+
+    // {}
+    if (c == '{') {
+      if (smallBrackets > 0 || mediumBrackets > 0) {
+        isValid = false;
+        break;
+      }
+      bigBrackets++;
+    }
+    if (c == '}') {
+      if (bigBrackets <= 0) {
+        isValid = false;
+        break;
+      }
+      if (smallBrackets > 0 || mediumBrackets > 0) {
+        isValid = false;
+        break;
+      }
+      bigBrackets--;
+    }
+
+    // []
+    if (c == '[') {
+      if (smallBrackets > 0) {
+        isValid = false;
+        break;
+      }
+      mediumBrackets++;
+    }
+    if (c == ']') {
+      if (mediumBrackets <= 0) {
+        isValid = false;
+        break;
+      }
+      if (smallBrackets > 0) {
+        isValid = false;
+        break;
+      }
+      mediumBrackets--;
+    }
+
+    // ()
+    if (c == '(') {
+      smallBrackets++;
+    }
+    if (c == ')') {
+      if (smallBrackets <= 0) {
+        isValid = false;
+        break;
+      }
+      smallBrackets--;
+    }
+  }
+
+  if (smallBrackets != 0 || mediumBrackets != 0 || bigBrackets != 0 || isValid == false) {
+    cout << "Error" << endl;
+  } else {
+    cout << "OK" << endl;
+  }
+}
+
 
 int main() {
   // printFigure1();
   // compare2dates();
   // checkBit();
   // nthPrimeNumber();
-  numberTransformation();
-
+  // numberTransformation();
+  // changeCase();
+  // matchBrackets();
 
   return 0;
 }
