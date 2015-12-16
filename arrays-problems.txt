@@ -1,0 +1,24 @@
+0. Read array with n elements (n<=20)
+  - print it in reverse order
+  - sum the mirror indexed numbers
+
+1. Read a number
+  - print how many times each digit is met
+
+2. Read a number (n < 4000)
+  - print if it's prime using Eratosthenes sieve
+
+3. Read 7x7 matrix
+  - print by zig-zag
+  - [print by JPEG]
+
+4. Read NxK matrix, n,k <= 50
+  Print i,j, where a[i][j] = AVG(neighbours)
+
+5.
+
+--
+SUM of matrixes
+Transpose
+Multiply
+is diagonal
